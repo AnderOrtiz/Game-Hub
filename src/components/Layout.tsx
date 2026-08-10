@@ -1,19 +1,20 @@
 import { Outlet, Link } from "react-router"
+import { Button } from "./ui/button.tsx"
 
 
 export const Layout = () => {
     return (
-        <div>
-            <nav>
-                <Link to="/">Game-Hub</Link>
+        <div className="flex flex-col min-h-screen">
+            <nav className="w-full py-4 flex justify-center border-b">
+                <Button render={<Link to="/">Game-Hub</Link>}></Button>
             </nav>
 
-            <main>
+            <main className="max-w-7xl w-full mx-auto flex px-3 grow">
                 <Outlet />
             </main>
 
-            <footer>
-                <p>Anderson Ortiz — All rights reserved 2026</p>
+            <footer className=" text-muted-foreground text-sm  w-full flex justify-center">
+                <p>Anderson Ortiz © 2026</p>
             </footer>
         </div>
     )
