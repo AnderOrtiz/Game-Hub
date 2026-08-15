@@ -39,6 +39,6 @@ export function isSequenceComplete(state: GameState): boolean {
     return state.playerIndex === state.sequence.length
 }
 
-export function nextRound() {
-    // TODO
-};
+export function nextRound(state: GameState): GameState { return startRound(state) };
+
+export function resetGame(): GameState { return createGame() }
