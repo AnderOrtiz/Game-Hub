@@ -4,8 +4,8 @@ import { colorMap } from "./colorMap";
 type Props = {
     activeColor: Color | null
     handleColorClick: (color: Color) => void
-    handleColorPress: Color | null
-    handleColorRelease: void
+    handleColorPress: (color: Color) => void
+    handleColorRelease: () => void
 }
 
 
@@ -14,17 +14,20 @@ export const Board = ({ activeColor, handleColorClick, handleColorPress, handleC
     const corners = ["rounded-tl-full", "rounded-tr-full", "rounded-bl-full", "rounded-br-full"]
 
     return (
-        <div className="w-fit grid grid-cols-2">
+        <div className="w-fit grid grid-cols-2 justify-center ">
             {keys.map((color, index) => (
                 <div key={color}
                     style={{ backgroundColor: colorMap[color] }}
                     className={
-                        color === activeColor ? `size-80 opacity-100 ${corners[index]}`
-                            : `size-80 opacity-60 ${corners[index]}`
+                        color === activeColor ? ` size-32 opacity-100 ${corners[index]} sm:size-48 lg:size-64`
+
+                            : ` size-32 opacity-60 ${corners[index]} sm:size-48 lg:size-64`
                     }
                     onClick={() => handleColorClick(color)}
-                    // TODO onMouseUp={() => { () => { handleColorPress(color) } }}
-                    onMouseDown={() => { () => { handleColorRelease } }}>
+                    onMouseDown={() => handleColorPress(color)}
+                    onMouseUp={() => handleColorRelease()}
+                    onTouchStart={() => handleColorPress(color)}
+                    onTouchEnd={() => handleColorRelease()}>
                 </div>
             ))
             }

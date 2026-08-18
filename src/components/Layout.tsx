@@ -6,7 +6,7 @@ export const Layout = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <nav className="w-full py-4 flex justify-center border-b">
-                <Button render={<Link to="/">Game-Hub</Link>}></Button>
+                <Button size="lg" render={<Link to="/">Game-Hub</Link>}></Button>
             </nav>
 
             <main className="max-w-7xl w-full mx-auto flex px-3 grow">

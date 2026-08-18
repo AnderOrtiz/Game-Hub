@@ -15,6 +15,7 @@ export function useSimonGame() {
     }
 
     async function showSequence(sequence: Color[]) {
+        await delay(500)
         for (const color of sequence) {
             setActiveColor(color)
             await delay(500)
