@@ -1,82 +1,82 @@
 # 🎮 Game Hub
 
-Game Hub is a personal learning project focused on building a hub of small browser games from scratch, with an emphasis on understanding software architecture concepts step by step: clean domain logic, testing, UI/UX, backend, database, authentication, and security.
+**Live demo:** https://6a83acdb41e937749bf85b4f--zitrohub.netlify.app/
 
-The first game being built is **Simon**, implemented independently of React for its core logic, then wired into a React UI.
+Game Hub is a personal learning project where I build small browser games while learning software architecture, testing, UI/UX, backend development, databases, authentication, and security.
 
-## 🎯 Project goals
+The first game is **Simon**, with its core logic implemented independently from React and then connected to a React UI.
 
-This project is built incrementally, phase by phase, following a personal roadmap. The guiding principle: **don't add a layer of architecture (repository, DTO, service, etc.) until there's an actual problem it solves.**
+## 🎯 Goals
 
-Planned phases include:
+The project is built step by step. The idea is to introduce new layers only when they solve a real problem.
 
-- Game Hub + routing between games
-- Simon game core logic (framework-agnostic)
-- Testing (Vitest + React Testing Library)
-- UI/UX, animations, sound
-- Backend + REST API
-- Database with Prisma
-- Users & authentication
-- Cryptography fundamentals
-- Score & leaderboard system
-- Additional games
+Planned features:
+
+* Game Hub and routing
+* Simon game
+* Testing
+* UI/UX, animations, and sound
+* Backend and REST API
+* Database with Prisma
+* Authentication
+* Security fundamentals
+* Scores and leaderboards
+* More games
 
 ## 🛠️ Tech stack
 
-- **Vite** — build tool / dev server
-- **React** — UI library
-- **TypeScript** (strict mode) — type safety
-- **ESLint** — static code analysis
-- **Prettier** — code formatting
-- **pnpm** — package manager
+* **Vite** — build tool
+* **React** — UI
+* **TypeScript** — type safety
+* **ESLint** — linting
+* **Prettier** — formatting
+* **pnpm** — package manager
 
 ## 📋 Requirements
 
-Before installing, make sure you have:
+* **Node.js**
+* **pnpm**
 
-- **Node.js** — [check the recommended version here](https://nodejs.org/)
-- **pnpm** — this project uses pnpm as its package manager (not npm or yarn)
+Install pnpm if needed:
 
-To install pnpm globally, if you don't have it yet:
-
-\`\`\`bash
+```bash
 npm install -g pnpm
-\`\`\`
+```
 
 ## 🚀 Installation
 
-1. Clone the repository:
+Clone the repository:
 
-\`\`\`bash
+```bash
 git clone <YOUR_REPO_URL>
 cd game-hub
-\`\`\`
+```
 
-2. Install dependencies:
+Install dependencies:
 
-\`\`\`bash
+```bash
 pnpm install
-\`\`\`
+```
 
-3. Start the development server:
+Start the development server:
 
-\`\`\`bash
+```bash
 pnpm dev
-\`\`\`
+```
 
-4. Open your browser at the URL shown in the terminal (usually `http://localhost:5173`).
+Then open the URL shown in the terminal, usually `http://localhost:5173`.
 
-## 📜 Available scripts
+## 📜 Scripts
 
-| Script | Description |
-|---|---|
-| `pnpm dev` | Starts the development server with HMR |
-| `pnpm build` | Builds the app for production |
-| `pnpm lint` | Runs ESLint |
+| Command      | Description              |
+| ------------ | ------------------------ |
+| `pnpm dev`   | Start development server |
+| `pnpm build` | Build for production     |
+| `pnpm lint`  | Run ESLint               |
 
-## 📁 Project structure
+## 📁 Structure
 
-\`\`\`
+```text
 src/
 ├── app/
 ├── components/
@@ -86,9 +86,10 @@ src/
 ├── routes/
 ├── utils/
 └── main.tsx
-\`\`\`
+```
 
 ## 📌 Status
 
-🚧 Work in progress — currently in early setup phase.\
+🚧 **Work in progress**
 
+Currently in the early development phase.
